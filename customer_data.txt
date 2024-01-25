@@ -1,0 +1,11 @@
+
+Bill ID.: -858993459
+----------------------------------------------------------------
+Product Name:  Bacon Quantity of Items: 4 Item Price: 91
+Product Name:  milk Quantity of Items: 7 Item Price: 13
+Product Name:  eggs Quantity of Items: 4 Item Price: 5
+Product Name:  chocolate Quantity of Items: 7 Item Price: 4
+Product Name:  socks Quantity of Items: 2 Item Price: 13
+Product Name:  8 Quantity of Items: 2 Item Price: 5
+Product Name:  shoes Quantity of Items: 179.2 Item Price: 4
+------------------------------------------------------------------

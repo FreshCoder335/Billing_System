@@ -22,7 +22,7 @@ public:
 	void customer_input();
 	void system_output();
 };
-class added_tax :public user_interface
+class added_tax:public user_interface
 {
 	float added_taxes;
 public:
@@ -107,11 +107,11 @@ void added_tax::calculatedtax()
 	{
 		if (item_price[i] <= 100.00)
 		{
-			added_tax_price[i] = total_price[i] + (0.05 * total_price[i]);
+			added_tax_price[i] = total_price[i] + (0.03 * total_price[i]);
 		}
 		else
 		{
-			added_tax_price[i] = total_price[i] + (0.2 * total_price[i]);
+			added_tax_price[i] = total_price[i] + (0.1 * total_price[i]);
 		}
 	}
 }
@@ -172,7 +172,7 @@ int security_password()
 	cin >> password_3;
 	cout << "*";
 
-	if ((password_1 == 'a' || password_1 == 'a') && (password_2 == 'x' || password_2 == 'X') && (password_3 == 'e' || password_3 == 'E'))
+	if ((password_1 == 'a' || password_1 == 'A') && (password_2 == 'x' || password_2 == 'X') && (password_3 == 'e' || password_3 == 'E'))
 		return 1;
 	else
 		return 0;

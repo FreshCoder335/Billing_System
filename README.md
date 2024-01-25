@@ -12,9 +12,9 @@
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+Microsoft visual studio 2022
 
-{Describe the programming language that you used}
+C++
 
 # Useful Websites
 
