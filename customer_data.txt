@@ -9,3 +9,28 @@ Product Name:  socks Quantity of Items: 2 Item Price: 13
 Product Name:  8 Quantity of Items: 2 Item Price: 5
 Product Name:  shoes Quantity of Items: 179.2 Item Price: 4
 ------------------------------------------------------------------
+
+Bill ID.: -858993458
+----------------------------------------------------------------
+Product Name:  bacon Quantity of Items: 3 Item Price: 11
+Product Name:  shoes Quantity of Items: 1 Item Price: 10
+Product Name:  tshirt Quantity of Items: 1 Item Price: 10
+Product Name:  hat Quantity of Items: 1 Item Price: 11
+------------------------------------------------------------------
+
+Bill ID.: -858993457
+----------------------------------------------------------------
+Product Name:  Eggs Quantity of Items: 2 Item Price: 15
+Product Name:  Milk Quantity of Items: 2 Item Price: 15
+------------------------------------------------------------------
+
+Bill ID.: -858993456
+----------------------------------------------------------------
+Product Name:  Eggs Quantity of Items: 2 Item Price: 15
+Product Name:  Milk Quantity of Items: 1 Item Price: 4
+------------------------------------------------------------------
+
+Bill ID.: -858993455
+----------------------------------------------------------------
+Product Name:  Shoes Quantity of Items: 3 Item Price: 62
+------------------------------------------------------------------

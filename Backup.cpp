@@ -2,8 +2,6 @@
 # include <process.h>  
 # include <fstream>  
 # include <stdlib.h>
-
-
 using namespace std;
 
 class user_interface
@@ -23,10 +21,8 @@ public:
 	// according to documentation, its a means of calling functions later on. 
 	void customer_input();
 	void system_output();
-	void entry_edit();
-	void entry_deletion();
 };
-class added_tax:public user_interface
+class added_tax :public user_interface
 {
 	float added_taxes;
 public:
@@ -42,8 +38,8 @@ public:
 void user_interface::customer_input()
 {
 	system("CLS");
-	cout<<"\nPlease enter the number of items purchased: ";
-	cin>>shopping_list;
+	cout << "\nPlease enter the number of items purchased: ";
+	cin >> shopping_list;
 
 	// for loop gathering data on a customer's shopping list. Like in most
 	// loops itterating through lists it will itterate through it dependent on
@@ -74,10 +70,10 @@ void user_interface::system_output()
 	int alpha;
 
 	ifstream infile("shopping_data.txt");
-	infile >> alpha; 
+	infile >> alpha;
 	// tracking file access and returning something should there be an issue. 
 	ifstream infile("shopping_data.txt");
-	if (!infile) 
+	if (!infile)
 	{
 		cout << "There was an issue opening the data file, contact admin for aid";
 		return;
@@ -107,52 +103,6 @@ void user_interface::system_output()
 	}
 }
 
-// This funciton allows the user to edit a shopping entry.
-void user_interface::entry_edit()
-{
-	int entry_to_edit;
-	cout << "\nEnter the entry number you want to edit: ";
-	cin >> entry_to_edit;
-
-	if (entry_to_edit > 0 && entry_to_edit <= shopping_list) {
-		cout << "\nEnter new details for the item:\n";
-		cout << "Name: ";
-		cin >> item_name[entry_to_edit - 1];
-		cout << "Quantity: ";
-		cin >> item_quantity[entry_to_edit - 1];
-		cout << "Price: ";
-		cin >> item_price[entry_to_edit - 1];
-		total_price[entry_to_edit - 1] = item_quantity[entry_to_edit - 1] * item_price[entry_to_edit - 1];
-		cout << "\nEntry updated successfully.\n";
-	}
-	else {
-		cout << "\nInvalid entry number.\n";
-	}
-}
-// This function allows for the deletion of any unwanted shopping entries.
-void user_interface::entry_deletion() {
-	int entry_to_delete;
-	cout << "\nEnter the entry number you want to delete: ";
-	cin >> entry_to_delete;
-
-	if (entry_to_delete > 0 && entry_to_delete <= shopping_list) {
-		for (int i = entry_to_delete - 1; i < shopping_list - 1; i++) {
-			strcpy(item_name[i], item_name[i + 1]);
-			item_quantity[i] = item_quantity[i + 1];
-			item_price[i] = item_price[i + 1];
-			total_price[i] = total_price[i + 1];
-		}
-		shopping_list--;
-		cout << "\nEntry deleted successfully.\n";
-	}
-	else {
-		cout << "\nInvalid entry number.\n";
-	}
-}
-
-
-
-
 //Sales tax calcualtion function
 
 void added_tax::calculatedtax()
@@ -162,7 +112,7 @@ void added_tax::calculatedtax()
 	customer_input();
 	// This for loop will iterate through all given items and their respective 
 	// prices calculating the price after a given sales tax. 
-	for (int i = 0; i < shopping_list; i++) 
+	for (int i = 0; i < shopping_list; i++)
 	{
 		if (item_price[i] <= 100.00)
 		{
@@ -194,18 +144,18 @@ void added_tax::tracked_outputs()
 	}
 	cout << "\nTotal: ";
 	cout << "\n------------------------------------------------------------";
-	cout << "\n\t Total Quantity =  "<<quantity_of_items<<"\t\t Total Sum of purchase = "<<total_sum<<"\t Total with Tax: "<<basic_sum;
+	cout << "\n\t Total Quantity =  " << quantity_of_items << "\t\t Total Sum of purchase = " << total_sum << "\t Total with Tax: " << basic_sum;
 	cout << "\n------------------------------------------------------------";
-// a loop for the customer to enter in the proper amount of funds for the
-// given purchase. 
-pay: 
+	// a loop for the customer to enter in the proper amount of funds for the
+	// given purchase. 
+pay:
 
 	cout << "\n\n\t\t\t****PAYMENT SUMMERAY****\n";
 	cout << "\n\t\t\t Total Payment given: ";
 	cin >> bank_account;
 
 	if (bank_account >= basic_sum)
-		cout << "\n\t\t\t Change: " << bank_account - basic_sum<<"\n";
+		cout << "\n\t\t\t Change: " << bank_account - basic_sum << "\n";
 	else
 	{
 		cout << "\n\t\t\t Insufficent funds";
@@ -276,7 +226,7 @@ int main()
 			cout << "\n\t\t\tOnline shopping aid";
 			cout << "\n\t\t\t------------------------------";
 			cout << "\n\n\t\t\tWhere are we starting today?";
-			cout << "\n\t\t\t1.\tEnter new shopping entry\n\t\t\t2.\t view previous entries\n\t\t\t3.\tEdit entry\n\t\t\t4\t Delete unwanted entry\n\t\t\t5.\tExit\t";
+			cout << "\n\t\t\t1.\tEnter new shopping entry\n\t\t\t2.\t view previous entries\n\t\t\t3.\tExit\n";
 			cout << "\n\nPlease enter your option: ";
 			cin >> option;
 			switch (option)
@@ -294,18 +244,11 @@ int main()
 				fin.close();
 				goto start;
 			case'3':
-				obj.entry_edit();
-				goto start;
-			case'4':
-				obj.entry_deletion();
-				goto start;
-			case'5':
 				exit(0);
 			default:
 				cout << "\a";
-				
 			}
-		} while (option != 5);
+		} while (option != 3);
 	}
 	return 0;
 }

@@ -19,5 +19,7 @@ C++
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* C++ Documentation(https://devdocs.io/cpp/)
+* shop billing system in C++(https://www.codewithrandom.com/2023/05/28/shop-billing-system-using-c/) aided me in getting the skeleton done
+* ChatGPT(https://chat.openai.com/)Primary for debugging
+* SourceCodester(https://www.sourcecodester.com/cc/17000/telecom-billing-management-system-c-source-code.html)Variations and add ons for billing system. 
