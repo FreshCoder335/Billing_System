@@ -112,7 +112,7 @@ void user_interface::entry_edit()
 	int entry_to_edit;
 	cout << "\nEnter the entry number you want to edit: ";
 	cin >> entry_to_edit;
-
+	// These if statements basically just state. Add these to my shopping list, with an error catch at line 127.
 	if (entry_to_edit > 0 && entry_to_edit <= shopping_list) {
 		cout << "\nEnter new details for the item:\n";
 		cout << "Name: ";
@@ -133,7 +133,8 @@ void user_interface::entry_deletion() {
 	int entry_to_delete;
 	cout << "\nEnter the entry number you want to delete: ";
 	cin >> entry_to_delete;
-
+	//This if and for loop chunk basically checks what entry and that specific strcpy_s function, according to documentation,
+	// acts as a pointer based on the number of the entry you want to delete. 
 	if (entry_to_delete > 0 && entry_to_delete <= shopping_list) {
 		for (int i = entry_to_delete - 1; i < shopping_list - 1; i++) {
 			strcpy_s(item_name[i], item_name[i + 1]);
