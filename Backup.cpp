@@ -76,7 +76,7 @@ void user_interface::system_output()
 	if (!infile)
 	{
 		cout << "There was an issue opening the data file, contact admin for aid";
-		return;
+		
 	}
 
 	ofstream outfile("shopping_data.txt");

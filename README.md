@@ -1,14 +1,16 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
 
-{Provide a description of your software}
+This program is a simple billing system that can track shopping sessions, edit them, and delete them should that 
+be neccessary. 
 
-{Describe your purpose for creating this software.}
+The purpose of this program I made is to simply practice and learn more about C++ as I have never used this lanuguage before.
+Not only that, utalizing it in microsoft visual studio 2022 gave me exposure to a different coding environment 
+that allowed me to experiement with different tactics at programming. 
 
-{Provide a link to your YouTube demonstration.  It should be a one minute demo of the software running and a walkthrough of the code.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+
+Simple Billing System. (http://youtube.link.goes.here)
 
 # Development Environment
 
@@ -19,7 +21,7 @@ C++
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-* C++ Documentation(https://devdocs.io/cpp/)
-* shop billing system in C++(https://www.codewithrandom.com/2023/05/28/shop-billing-system-using-c/) aided me in getting the skeleton done
+* C++ Documentation(https://devdocs.io/cpp/) 
+* shop billing system in C++(https://www.codewithrandom.com/2023/05/28/shop-billing-system-using-c/)
 * ChatGPT(https://chat.openai.com/)Primary for debugging
 * SourceCodester(https://www.sourcecodester.com/cc/17000/telecom-billing-management-system-c-source-code.html)Variations and add ons for billing system. 

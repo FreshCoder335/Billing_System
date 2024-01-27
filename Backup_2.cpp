@@ -26,7 +26,7 @@ public:
 	void entry_edit();
 	void entry_deletion();
 };
-class added_tax:public user_interface
+class added_tax :public user_interface
 {
 	float added_taxes;
 public:
@@ -42,8 +42,8 @@ public:
 void user_interface::customer_input()
 {
 	system("CLS");
-	cout<<"\nPlease enter the number of items purchased: ";
-	cin>>shopping_list;
+	cout << "\nPlease enter the number of items purchased: ";
+	cin >> shopping_list;
 
 	// for loop gathering data on a customer's shopping list. Like in most
 	// loops itterating through lists it will itterate through it dependent on
@@ -74,9 +74,9 @@ void user_interface::system_output()
 	int alpha;
 
 	ifstream infile("shopping_data.txt");
-	infile >> alpha; 
+	infile >> alpha;
 	// tracking file access and returning something should there be an issue. 
-	if (!infile) 
+	if (!infile)
 	{
 		cout << "There was an issue opening the data file, contact admin for aid";
 		return;
@@ -161,7 +161,7 @@ void added_tax::calculatedtax()
 	customer_input();
 	// This for loop will iterate through all given items and their respective 
 	// prices calculating the price after a given sales tax. 
-	for (int i = 0; i < shopping_list; i++) 
+	for (int i = 0; i < shopping_list; i++)
 	{
 		if (item_price[i] <= 100.00)
 		{
@@ -193,18 +193,18 @@ void added_tax::tracked_outputs()
 	}
 	cout << "\nTotal: ";
 	cout << "\n------------------------------------------------------------";
-	cout << "\n\t Total Quantity =  "<<quantity_of_items<<"\t\t Total Sum of purchase = "<<total_sum<<"\t Total with Tax: "<<basic_sum;
+	cout << "\n\t Total Quantity =  " << quantity_of_items << "\t\t Total Sum of purchase = " << total_sum << "\t Total with Tax: " << basic_sum;
 	cout << "\n------------------------------------------------------------";
-// a loop for the customer to enter in the proper amount of funds for the
-// given purchase. 
-pay: 
+	// a loop for the customer to enter in the proper amount of funds for the
+	// given purchase. 
+pay:
 
 	cout << "\n\n\t\t\t****PAYMENT SUMMERAY****\n";
 	cout << "\n\t\t\t Total Payment given: ";
 	cin >> bank_account;
 
 	if (bank_account >= basic_sum)
-		cout << "\n\t\t\t Change: " << bank_account - basic_sum<<"\n";
+		cout << "\n\t\t\t Change: " << bank_account - basic_sum << "\n";
 	else
 	{
 		cout << "\n\t\t\t Insufficent funds";
@@ -245,7 +245,7 @@ int main()
 	added_tax obj;
 	char option, choice;
 	int a = 1;
-	ifstream final;
+	ifstream fin;
 	a = security_password();
 	if (!a)
 	{
@@ -267,7 +267,6 @@ int main()
 	}
 	else {
 	last:;
-		// The main menu of the progam
 		do {
 		start:
 			system("PAUSE");
@@ -286,12 +285,12 @@ int main()
 				obj.tracked_outputs();
 				goto start;
 			case'2':
-				final.open("customer_data.txt", ios::in);
-				while (final.get(choice))
+				fin.open("HIS.TXT", ios::in);
+				while (fin.get(choice))
 				{
 					cout << choice;
 				}
-				final.close();
+				fin.close();
 				goto start;
 			case'3':
 				obj.entry_edit();
@@ -303,7 +302,7 @@ int main()
 				exit(0);
 			default:
 				cout << "\a";
-				
+
 			}
 		} while (option != 5);
 	}
